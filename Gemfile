@@ -41,3 +41,6 @@ group :development, :test do
   gem 'spring'
 end
 
+# Mongo DB
+gem 'mongo_mapper'
+gem 'bson_ext'
