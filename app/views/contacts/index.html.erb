@@ -1,13 +1,2 @@
+<%= render 'main_display' %>
 
-
-<div class="col-md-12 wrapper">
-	<div class="col-md-4">
-		<h3>Contacts</h3> <%= link_to "<span class='glyphicon glyphicon-plus' aria-hidden='true'></span>".html_safe, new_contacts_path%>
-		<% @contacts.each do |c| %>
-			<%= c.name %> <br>
-		<% end %>
-	</div>
-	<div class="col-md-8">
-		Contact Details
-	</div>
-</div>
