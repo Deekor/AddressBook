@@ -17,7 +17,8 @@ class ContactsController < ApplicationController
 
   # Create a new contact
   def create
-  	
+  	@contact = Contact.create(params[:contact])
+  	redirect_to :root, notice: "Contact Created!"
   end
 
   # Delete a contact

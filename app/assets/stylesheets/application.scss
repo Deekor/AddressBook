@@ -14,5 +14,22 @@
  *= require_self
  */
 
+$body-bg: #e8e8e8;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.wrapper
+{
+	background-color: white;
+	border-radius: 5px;
+	min-height: 500px;
+	margin-top: 20px;
+}
+.box
+{
+	padding: 10px;
+	background-color: white;
+	border-radius: 5px;
+	margin-top: 20px;
+}
