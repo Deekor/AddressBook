@@ -19,6 +19,16 @@ $body-bg: #e8e8e8;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+h3
+{
+	display: inline-block;
+}
+.inline-button
+{
+  float: right;
+  top: 24px;
+  position: relative;
+}
 .wrapper
 {
 	background-color: white;
@@ -32,4 +42,9 @@ $body-bg: #e8e8e8;
 	background-color: white;
 	border-radius: 5px;
 	margin-top: 20px;
+}
+.contact-details
+{
+	border-left: 1px solid #e8e8e8;
+	min-height: 500px;
 }

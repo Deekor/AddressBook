@@ -1,18 +1,19 @@
 <div class="col-md-12 wrapper">
 	<div class="col-md-2">
-		<h3>Contacts</h3> <%= link_to "<span class='glyphicon glyphicon-plus' aria-hidden='true'></span>".html_safe, new_contact_path%>
+		<h3>Contacts</h3> <%= link_to "<span class='glyphicon glyphicon-plus' aria-hidden='true'></span>".html_safe, new_contact_path, class: "inline-button"%> <br>
 		<% @contacts.each do |c| %>
 			<%= link_to c.name, show_contact_path(c.permalink) %><br>
 		<% end %>
 	</div>
-	<div class="col-md-10">
+	<div class="col-md-10 contact-details">
 		<% if @contact %>
-			<%= link_to "Edit", edit_contact_path(@contact.permalink) %> <br>
-			<%= link_to "Delete", delete_contact_path(@contact.permalink), method: "delete", :data => { :confirm => "Are you sure you want to delete this contact?" }%> <br>
-			<%= @contact.name %> <br>
+						<%= link_to "<span class='glyphicon glyphicon-trash' aria-hidden='true'></span>".html_safe, delete_contact_path(@contact.permalink), method: "delete", class: "inline-button", :data => { :confirm => "Are you sure you want to delete this contact?" }%>
+			<h3><%= @contact.name %> </h3> <%= link_to "<span class='glyphicon glyphicon-edit' aria-hidden='true'></span>".html_safe, edit_contact_path(@contact.permalink) %> <br>
 			<%= @contact.address %> <br>
 			<%= @contact.email %> <br>
 			<%= @contact.phone %> <br>
+						
+
 		<% end %>
 	</div>
 </div>
