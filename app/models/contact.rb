@@ -12,7 +12,7 @@ class Contact
   private 
 
   def generate_permalink
-  	self.permalink = self.name.gsub(" ", "-")
+  	self.permalink = self.name.downcase.gsub(" ", "-")
   	self.save
   end
 

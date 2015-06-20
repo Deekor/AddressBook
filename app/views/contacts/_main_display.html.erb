@@ -1,11 +1,18 @@
 <div class="col-md-12 wrapper">
-	<div class="col-md-4">
-		<h3>Contacts</h3> <%= link_to "<span class='glyphicon glyphicon-plus' aria-hidden='true'></span>".html_safe, new_contacts_path%>
+	<div class="col-md-2">
+		<h3>Contacts</h3> <%= link_to "<span class='glyphicon glyphicon-plus' aria-hidden='true'></span>".html_safe, new_contact_path%>
 		<% @contacts.each do |c| %>
-			<%= c.name %> <br>
+			<%= link_to c.name, show_contact_path(c.permalink) %><br>
 		<% end %>
 	</div>
-	<div class="col-md-8">
-		Contact Details
+	<div class="col-md-10">
+		<% if @contact %>
+			<%= link_to "Edit", edit_contact_path(@contact.permalink) %> <br>
+			<%= link_to "Delete", delete_contact_path(@contact.permalink), method: "delete", :data => { :confirm => "Are you sure you want to delete this contact?" }%> <br>
+			<%= @contact.name %> <br>
+			<%= @contact.address %> <br>
+			<%= @contact.email %> <br>
+			<%= @contact.phone %> <br>
+		<% end %>
 	</div>
 </div>
