@@ -44,3 +44,6 @@ end
 # Mongo DB
 gem 'mongo_mapper'
 gem 'bson_ext'
+
+# Bootstrap
+gem 'bootstrap-sass'
